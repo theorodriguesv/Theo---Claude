@@ -44,7 +44,9 @@ export default function AdicionarVideo() {
   return (
     <div>
       <h1>Adicionar vídeo concorrente</h1>
-      <p className="page-intro">Preencha o perfil e cole a transcrição já pronta do vídeo.</p>
+      <p className="page-intro">
+        Não é preciso enviar o vídeo — só o perfil e o texto da transcrição já pronta.
+      </p>
 
       <form onSubmit={handleSubmit} className="form card">
         <label>
@@ -58,13 +60,13 @@ export default function AdicionarVideo() {
         </label>
 
         <label>
-          Transcrição
+          Transcrição (texto)
           <textarea
             required
             rows={10}
             value={form.transcricao}
             onChange={(e) => update("transcricao", e.target.value)}
-            placeholder="Cole aqui a transcrição pronta do vídeo..."
+            placeholder="Cole aqui o texto da transcrição do vídeo (fale, digite ou copie de onde você já transcreveu — nenhum arquivo de vídeo é enviado aqui)."
           />
         </label>
 

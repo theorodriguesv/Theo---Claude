@@ -15,10 +15,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           <header className="topbar">
             <a href="/" className="brand">
               <span className="brand-mark">📊</span>
-              <span>
-                Scripts
-                <span className="brand-sub">@theo_vasc</span>
-              </span>
+              <span>Scripts</span>
             </a>
             <NavLinks />
           </header>
