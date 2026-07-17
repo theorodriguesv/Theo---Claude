@@ -1,0 +1,15 @@
+# Ambiente
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+
+# Dados sensíveis / pesados (gerados localmente, não versionar)
+input/*
+!input/.gitkeep
+data/*.json
+output/*.md
+
+# Sistema
+.DS_Store
