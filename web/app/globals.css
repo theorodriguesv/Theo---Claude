@@ -136,49 +136,6 @@ h1 {
   max-width: 56ch;
 }
 
-/* ---------- Stat cards ---------- */
-
-.stat-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-bottom: 36px;
-}
-
-@media (max-width: 640px) {
-  .stat-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-.stat-card {
-  background: var(--surface);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--radius);
-  padding: 18px 20px;
-}
-
-.stat-label {
-  color: var(--text-faint);
-  font-size: 0.72rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-bottom: 8px;
-}
-
-.stat-value {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-}
-
-.stat-sub {
-  color: var(--text-muted);
-  font-size: 0.8rem;
-  margin-top: 2px;
-}
-
 /* ---------- Empty state ---------- */
 
 .empty-state {
@@ -205,17 +162,23 @@ h1 {
 
 .video-card {
   display: flex;
-  align-items: center;
-  gap: 16px;
+  flex-direction: column;
+  gap: 12px;
   background: var(--surface);
   border: 1px solid var(--border-soft);
   border-radius: var(--radius);
-  padding: 16px 18px;
+  padding: 18px 20px;
+}
+
+.video-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .video-card-main {
-  flex: 1 1 220px;
   min-width: 0;
 }
 
@@ -230,55 +193,15 @@ h1 {
   margin-top: 2px;
 }
 
-.video-metrics {
-  display: flex;
-  gap: 18px;
-  flex: 1 1 260px;
-  flex-wrap: wrap;
-}
-
-.metric {
-  min-width: 64px;
-}
-
-.metric-label {
-  color: var(--text-faint);
-  font-size: 0.68rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.metric-value {
-  font-size: 0.92rem;
-  font-weight: 600;
-  margin-top: 1px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  padding: 5px 12px;
-  border-radius: 999px;
-  font-size: 0.8rem;
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.badge-good {
-  background: var(--good-soft);
-  color: var(--good);
-}
-
-.badge-warn {
-  background: var(--warn-soft);
-  color: var(--warn);
-}
-
-.badge-neutral {
-  background: var(--accent-soft);
-  color: var(--accent-strong);
+.video-preview {
+  color: var(--text-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ---------- Forms ---------- */

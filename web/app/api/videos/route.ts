@@ -21,10 +21,6 @@ export async function POST(req: NextRequest) {
 
   const novo = await addVideo({
     perfil: perfil.startsWith("@") ? perfil : `@${perfil}`,
-    curtidas: Number(body.curtidas) || 0,
-    comentarios: Number(body.comentarios) || 0,
-    views: Number(body.views) || 0,
-    data: String(body.data || ""),
     transcricao: String(body.transcricao),
   });
 

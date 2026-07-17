@@ -5,10 +5,6 @@ import { useState, type FormEvent } from "react";
 
 const CAMPOS_INICIAIS = {
   perfil: "",
-  curtidas: "",
-  comentarios: "",
-  views: "",
-  data: "",
   transcricao: "",
 };
 
@@ -48,7 +44,7 @@ export default function AdicionarVideo() {
   return (
     <div>
       <h1>Adicionar vídeo concorrente</h1>
-      <p className="page-intro">Preencha os dados e cole a transcrição já pronta do vídeo.</p>
+      <p className="page-intro">Preencha o perfil e cole a transcrição já pronta do vídeo.</p>
 
       <form onSubmit={handleSubmit} className="form card">
         <label>
@@ -60,44 +56,6 @@ export default function AdicionarVideo() {
             placeholder="concorrente_exemplo"
           />
         </label>
-
-        <div className="grid4">
-          <label>
-            Curtidas
-            <input
-              type="number"
-              min="0"
-              value={form.curtidas}
-              onChange={(e) => update("curtidas", e.target.value)}
-            />
-          </label>
-          <label>
-            Comentários
-            <input
-              type="number"
-              min="0"
-              value={form.comentarios}
-              onChange={(e) => update("comentarios", e.target.value)}
-            />
-          </label>
-          <label>
-            Views
-            <input
-              type="number"
-              min="0"
-              value={form.views}
-              onChange={(e) => update("views", e.target.value)}
-            />
-          </label>
-          <label>
-            Data
-            <input
-              type="date"
-              value={form.data}
-              onChange={(e) => update("data", e.target.value)}
-            />
-          </label>
-        </div>
 
         <label>
           Transcrição
