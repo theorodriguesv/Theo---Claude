@@ -48,9 +48,9 @@ export default function AdicionarVideo() {
   return (
     <div>
       <h1>Adicionar vídeo concorrente</h1>
-      <p>Preencha os dados e cole a transcrição já pronta do vídeo.</p>
+      <p className="page-intro">Preencha os dados e cole a transcrição já pronta do vídeo.</p>
 
-      <form onSubmit={handleSubmit} className="form">
+      <form onSubmit={handleSubmit} className="form card">
         <label>
           Perfil (@)
           <input

@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import "./globals.css";
+import NavLinks from "./NavLinks";
 
 export const metadata = {
   title: "Scripts @theo_vasc",
@@ -13,13 +14,13 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <div className="shell">
           <header className="topbar">
             <a href="/" className="brand">
-              📊 Scripts @theo_vasc
+              <span className="brand-mark">📊</span>
+              <span>
+                Scripts
+                <span className="brand-sub">@theo_vasc</span>
+              </span>
             </a>
-            <nav>
-              <a href="/">Base de vídeos</a>
-              <a href="/adicionar">+ Adicionar vídeo</a>
-              <a href="/scripts">Gerar scripts</a>
-            </nav>
+            <NavLinks />
           </header>
           <main>{children}</main>
         </div>

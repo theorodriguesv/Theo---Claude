@@ -20,7 +20,7 @@ export default function DeleteButton({ id }: { id: string }) {
   }
 
   return (
-    <button className="link-danger" onClick={handleDelete} disabled={removendo}>
+    <button className="icon-btn" onClick={handleDelete} disabled={removendo}>
       {removendo ? "removendo..." : "remover"}
     </button>
   );
